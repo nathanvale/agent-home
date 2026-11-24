@@ -28,4 +28,4 @@ This repository is public. Keep every change free of these items:
 - employer or client names
 - email addresses or private account handles
 
-The scan requires `PRIVATE_SCAN_PATTERN` and exits non-zero when the variable is unset or empty. Keep the pattern outside this repository as a CI secret, or set it in your shell from a private copy. Before you push, run `./scripts/private-scan.sh` to check all tracked files.
+The scan requires `PRIVATE_SCAN_PATTERN` and exits non-zero when the variable is unset or empty. Keep the pattern outside this repository as a CI secret, or set it in your shell from a private copy. Before you push, run `./scripts/private-scan.sh` to check the committed tree.

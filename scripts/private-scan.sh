@@ -11,7 +11,7 @@ repo_root="$(git rev-parse --show-toplevel)"
 cd "$repo_root"
 
 status=0
-git grep -a -n -i -E -e "$pattern" -- . || status=$?
+git grep -a -n -i -E -e "$pattern" HEAD -- . || status=$?
 
 if [[ "$status" -eq 0 ]]; then
   exit 1
