@@ -30,8 +30,7 @@ Apply every rule below in every coding agent session.
 ## Worktrees and branches
 
 - Code repository edit: use an isolated worktree and commit only to a branch.
-- Worktree location: `<repo>/.worktrees/<name>`. Pass the path when the tool takes one (`herdr worktree create --path`, VS Code prompt, `git worktree add`). Claude Code `--worktree` and worktree isolation land there through the `WorktreeCreate` hook.
-- Stray worktree: `worktree status` reports `stray_worktree_count`; relocate with `git worktree move`. Deletion of a stray worktree is the user's decision.
+- Worktree location: when you create one yourself (`git worktree add`, `herdr worktree create --path`, a VS Code prompt), use `<repo>/.worktrees/<name>`. A harness's own worktree feature keeps its documented default folder.
 - New Bun or TypeScript repository: after choosing its owner, use the README of `nathanvale/bun-typescript-template` for bootstrap.
 - Never force-push, hard-reset, run `git clean -f`, restore the entire working tree, force-switch branches, or stage with `git add .` or `git add -A`. When Claude Code's `git-safety` hook is installed, it refuses these and prints the safer command.
 - Dirty or untracked work: treat it as owned until proven disposable. Preserve it before removing a worktree or branch.
