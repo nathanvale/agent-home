@@ -13,6 +13,19 @@ Apply every rule below in every coding agent session.
 - Before a decision, complete authorized reversible preparation. Present the recommendation, material trade-off, and exact action needing approval. Name the governing rule only when it actually requires the pause. Silence is not approval; an existing explicit approval remains sufficient within its scope.
 - External writes: keep push, publish, post, message, and remote-state changes in the foreground session. Delegated workers return proposals only.
 - Run proportionate checks and required reviews within authorized work without a separate permission round. Optional reviews needing material extra cost, external access, or broader scope require a decision first.
+- Preserve unrelated user and agent changes.
+- Keep secrets, tokens, credentials, and private values out of source and output.
+- Test meaningful changes. State any proof gap instead of implying success.
+- Evidence state: keep planned, implemented, tested, qualified, committed, pushed, merged, installed, activated, submitted, and released distinct. Report only the state current evidence proves.
+- Mutable state: treat handoffs, packets, cached output, and prior observations as context, not authority. Refresh live state before acting or reporting.
+- Unknown external outcome: inspect the exact target; retry only after live state proves the first attempt had no effect.
+
+## Ownership
+
+- Follow the closest repository or directory instructions for the files being changed.
+- Keep startup instructions to cross-project rules and sharp routes. Skills own workflows; code, CLI help, generated docs, and checks own deterministic contracts.
+- Read the smallest sufficient owner. Point to it instead of copying its contract.
+- Generated file: edit its named source, then regenerate the output.
 
 ## Worktrees and branches
 
@@ -20,3 +33,20 @@ Apply every rule below in every coding agent session.
 - Worktree location: `<repo>/.worktrees/<name>`. Pass the path when the tool takes one (`herdr worktree create --path`, VS Code prompt, `git worktree add`). Claude Code `--worktree` and worktree isolation land there through the `WorktreeCreate` hook.
 - Stray worktree: `worktree status` reports `stray_worktree_count`; relocate with `git worktree move`. Deletion of a stray worktree is the user's decision.
 - New Bun or TypeScript repository: after choosing its owner, use the README of `nathanvale/bun-typescript-template` for bootstrap.
+- Never force-push, hard-reset, run `git clean -f`, restore the entire working tree, force-switch branches, or stage with `git add .` or `git add -A`. When Claude Code's `git-safety` hook is installed, it refuses these and prints the safer command.
+- Dirty or untracked work: treat it as owned until proven disposable. Preserve it before removing a worktree or branch.
+- Pull request body: write or revise it with the `pr` skill.
+- Make clones and copies only in a `mktemp -d` folder under the system temp folder (or a tool's own default worktree folder), and delete what you made when the job ends.
+
+## Agent-native work
+
+- Give capable agents maps, invariants, owner paths, inspectable state, and the next safe action.
+- New tool or capability: search current dependencies and existing products for an owner before design. Record why reuse does not fit before custom implementation.
+- Module, interface, or seam design: use `codebase-design` before implementation.
+- Before the first edit, reconcile the request, accepted decisions, current diff, and named spec or handoff. State required outcomes, exclusions, and the stop boundary.
+- Contradiction: outside a declared intentional RED step, stop when instructions, tests, and executable source disagree. Identify the authoritative owner and reconcile the mismatch before editing.
+- Treat accepted decisions as settled. Reopen one only for direct contradiction or new high-consequence evidence.
+- Keep delegated work inside its named unit. Stop at its review, commit, or handoff boundary; start the next unit only with authority.
+- Preserve every explicit requirement. Report missing proof as incomplete; never defer, narrow, or replace it because another path is easier or green.
+- Use existing contract and discovery owners. Keep throwaway probes outside repositories; never invent placeholder commands, states, or interfaces to make a test pass.
+- Every failure names its cause and its repair path, or the handoff replacing it.
