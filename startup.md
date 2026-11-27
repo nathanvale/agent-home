@@ -40,7 +40,7 @@ Apply every rule below in every coding agent session.
 ## Agent-native work
 
 - Give capable agents maps, invariants, owner paths, inspectable state, and the next safe action.
-- New tool or capability: search current dependencies and existing products for an owner before design. Record why reuse does not fit before custom implementation.
+- New tool or capability: search current dependencies and existing products for an owner before design. Record why reuse does not fit before custom implementation. Adopt a mainstream tool through its real command or API, unchanged. When agents need one front door to it, wrap it in a kernel CLI that adds only what the tool lacks (preview, refusal causes with repair steps, receipts, safe defaults), so plain use of the tool still works.
 - Module, interface, or seam design: use `codebase-design` before implementation.
 - Before the first edit, reconcile the request, accepted decisions, current diff, and named spec or handoff. State required outcomes, exclusions, and the stop boundary.
 - Contradiction: outside a declared intentional RED step, stop when instructions, tests, and executable source disagree. Identify the authoritative owner and reconcile the mismatch before editing.
