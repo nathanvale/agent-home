@@ -35,7 +35,7 @@ Apply every rule below in every coding agent session.
 - Never force-push, hard-reset, run `git clean -f`, restore the entire working tree, force-switch branches, or stage with `git add .` or `git add -A`. When Claude Code's `git-safety` hook is installed, it refuses these and prints the safer command.
 - Dirty or untracked work: treat it as owned until proven disposable. Preserve it before removing a worktree or branch.
 - Pull request body: write or revise it with the `pr` skill.
-- Make clones and copies only in a `mktemp -d` folder under the system temp folder (or a tool's own default worktree folder), and delete what you made when the job ends.
+- Make clones and copies only in a `mktemp -d` folder under the system temp folder (or a tool's own default worktree folder), and delete what you made when the job ends, after any work in it is pushed or saved elsewhere.
 
 ## Agent-native work
 
